@@ -1,3 +1,6 @@
+extern crate rand;
+
+
 fn main() {
     //integer types
     let num: i32 = 1_00;

@@ -6,39 +6,45 @@ This repo is more or less my journal on my daily effort to learn rust
 i try to update this maarkdown file with every progress i make in learning rust, daily.
 
 ## day 0
-started reading the official rust book for newbies; "The Rust Programming Language"
+started reading the official rust book for newbies; **"The Rust Programming Language"**
 
-With its direction, i installed rust and its build system, cargo, with the rustup cli tool, wrote my first rust program (of course its a "Hello, world!" program) and compiled with the "rustc" command
+With its direction, i installed rust and its build system, cargo, with the rustup cli tool, wrote my first rust program (_of course its a "Hello, world!" program_) and compiled with the "rustc" command
 
-got introduced to cargo(very neat tool and it is very similar to npm and node.js imo) and learnt how to initialize my rust projects with cargo 
+got introduced to cargo(very neat tool and it is very similar to ~~npm~~ imo) and learnt how to initialize my rust projects with cargo 
 
 ## day 1
 
-red chapter 2 of the book and wrote my first project (a guessing game) in rust. it was fun and i kinda enjoyed it
-
-used the rust's std::io lib(for i/o stuff) and learnt how to collect user input from StdIn with read_line() method. 
-
+Completed first Rust project (guessing game) and started rustlings exercises. Used `std::io` for I/O operations and Result type for error handling. Learned about mutable variables, String type, and installing crates via cargo.toml.
+used the rust's `std::io` lib and learnt how to collect user input from StdIn with `read_line()` method.
 i found that types in Rust are kinda similar to how it is in typescript, it has its own methods and can share with other types, kinda like classes
+Result type has Ok (successful) and Err (unsuccessful) variants - similar to JS Promises. Used `.expect()` for basic error handling and println!() macro for output.
 
-the Result type has two variants, Ok(successful operations) and Err(unsuccessful),(Result type is kinda like Promises in js), learnt a little about error handling, albeit not the best, with .expect() method, learnt how to use the "println!()" macro and how to print values and variables on the StdOut with placeholders
+> _Another neat feature of Cargo is that you can run the cargo doc --open command, 
+which will build documentation provided by all of your dependencies locally and 
+open it in your browser_
 
-uh i also learnt a little about associated functions and types
-used a mutable variable for the first time, learnt a bit about "String" type and how to create new instances of the type
-
-learnt how to install dependencies(or crates like how rustceans call it) with cargo, simply just paste the name of the dependency with its version number in the 
-cargo.toml file and run the `cargo build` command, it will download the dependency and compile it for use in your project
+also this. very, very helpful
 
 learnt how to use external crates and learnt a little about traits like `rand::Rng`
-used the `std::cmp::Ordering` type with the .cmp() method in the project to compare the user's guess with user's guess with the generated random number with the `match` expression(which has patterns arms or whatever), a much better version of switch case statements(can be used in error handling)
 
-there is also a `loop` statement that creates an endless loop or something but can be broken with uh idk the `break` statement, bascially how loops work in other languages
+```rs
+extern crate rand;
 
+use std::io;
+use std::cmp::Ordering;
+use rand::Rng;
+
+fn main{
+    //...
+}
+
+```
+Used std::cmp::Ordering with .cmp() for number comparison and match expressions. Implemented loop with break statements for program control.
 learnt a lot in this chapter, having fun reading this book
+well here is the link to the code on github
+Completed rustlings exercises 1-11
 
 well here is the [link](https://github.com/eghosaclinton/rust_guessing_game) to the code on github
-
-started rustlings as well
-did exercises 1 - 11(i guess experience as a programmer and chapter 1 and 2 of the book could only carry me so far)
 
 ## day 2
 
